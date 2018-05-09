@@ -38,7 +38,10 @@ app.get("/", (req, res) => {
 })
 
 app.get("/full_secrets", (req, res) => {
-    return res.json({my_secrets: secrets})
+    let mode = "DEV"
+    if (process.env.NODE_ENV === "production")
+        mode = "PRODUCTION"
+    return res.json({mode: mode, my_secrets: secrets})
 })
 
 // Start the server
