@@ -1,0 +1,22 @@
+{
+  "name": "mikepersonalwebpage",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run server\"",
+    "server": "nodemon --exec node server.js"
+  },
+  "author": "Mike Liu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.17.2",
+    "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.15.3",
+    "express-validator": "^5.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
